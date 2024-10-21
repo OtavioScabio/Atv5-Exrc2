@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="Digite o valor em bits:"
+        app:layout_constraintBottom_toTopOf="@+id/editTextBits"
+        app:layout_constraintStart_toStartOf="@+id/editTextBits"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextBits"
+        android:layout_width="283dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="42dp"
+        android:inputType="number"
+        android:importantForAutofill="no"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="Escolha a unidade para conversão:"
+        app:layout_constraintBottom_toTopOf="@+id/radioGroupUnidade"
+        app:layout_constraintStart_toStartOf="@+id/radioGroupUnidade"
+        app:layout_constraintTop_toBottomOf="@+id/editTextBits" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupUnidade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonConverter"
+        app:layout_constraintEnd_toStartOf="@+id/buttonConverter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/radioBytes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bytes" />
+
+        <RadioButton
+            android:id="@+id/radioKB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="KB" />
+
+        <RadioButton
+            android:id="@+id/radioMB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MB" />
+
+        <RadioButton
+            android:id="@+id/radioGB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GB" />
+
+        <RadioButton
+            android:id="@+id/radioTB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TB" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/buttonConverter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="33dp"
+        android:text="Converter"
+        app:layout_constraintBottom_toTopOf="@+id/textViewResultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroupUnidade" />
+
+    <TextView
+        android:id="@+id/textViewResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="104dp"
+        android:paddingTop="16dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonConverter" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="43dp"
+        android:layout_marginBottom="54dp"
+        android:text="Otavio Gabriel Ribeiro Scabio - 1110482223043"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
